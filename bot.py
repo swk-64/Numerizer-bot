@@ -50,8 +50,8 @@ def get_message(message):
 
 def get_image(message):
     if not message.photo:
-        bot.send_message(message.from_user.id, "This isn't a photo! Please, give me a photo, or enter /cancel, "
-                                               "to return")
+        bot.send_message(message.from_user.id, "This isn't a photo! Please, send me a photo. Enter /numerize to "
+                                               "try again")
     else:
         file_id = message.photo[-1].file_id
         path = bot.get_file(file_id)
